@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Kate's notes</title>
+</head>
+<body>
+	<h1>Important concepts</h1>
+		<div class="lesson">
+			<h2>Lesson 1: The Basics of the Web and HTML</h2>
+		<div class="notes">
+			<div class="subhead">World Wide Web</div>
+			<p>
+				The World Wide Web is a huge collection of <em>HTML documents</em>. It was invented in the 1990s and now it contains over 30 billion <em>web pages</em>.
+			</p>
+			<p>
+				This is how it works. When you visit a web page your computer sends a <em>HTTP request</em>  to a <em>server</em>  via  <em>the Internet</em>. The server finds the HTML document with all the files for the page and sends it back to your computer.  The <em>browser</em> on your computer interprets the information sent by the server and shows you the web page.  <a href="https://www.udacity.com/course/viewer#!/c-nd000/l-3873828673/e-48329854/m-48480496"> Here</a> is a good video about the components of the web.
+			</p>
+			<div class="subhead">HTML</div>
+			<p>
+				HTML (<em>Hypertext Markup Language</em>) is a special code for computers. HTML documents contain <em>text content</em> (what you actually see on the page) and <em>markup</em> (how the content is arranged).
+			</p>
+			<div class="subhead">Tags</div>
+				<p>
+				HTML markup is made of different <em>tags</em>. Together with content they make up different types of <em>elements</em>. <a href="https://www.udacity.com/course/viewer/#!/c-nd000/l-3873828673/m-48723444">Here</a> is a video about structure of HTML documents.
+			</p>
+			<p>
+				Tags are essential and you should be very carefull when writing HTML because computers are "stupid". Tags are instructions for them so even a smallest mistake can lead to a big problem.
+			</p>
+			<div class="subhead">Inline and block elements</div>
+			<p>
+			HTML elements can be <b>inline</b> or <b>block</b>. Block elements unlike inline ones create an "invisible box" around the content. The concept of boxes is very important in web programming.
+			</p>
+		</div>
+	</div>
+		<div class="lesson">
+            <h2>Lesson 2: Creating a Structured Document with HTML</h2>
+		<div class="notes">
+			<div class="subhead">Developer Tools</div>
+			<p>
+			Developer tools in Chrome browser shows the structure of the page. In Developer tools it is clearly seen that HTML elements form boxes on the page. 
+			</p>
+		<div class="subhead">Page Structure</div>
+        	<p>
+				The structure of any page is <em>"tree-like"</em>. It means HTML elements can be inside other elements.
+			</p>
+            <div class="image"><img src="images/tree-like.png" alt="Page structure"></div>
+			<p>
+				If you look at the structure of the page in Developer tools or any other tools you can see <em>sideway triangles</em> next to some of the elements. They indicate the "branching" structure and that these elements contain other elements. The more deeply "nested" in the structure an element is, the more <em>indented</em> it is in the code.
+			</p>
+		<div class="subhead">"Boxifying" design</div>
+			<p>
+				"Everything on the Web is boxes". Before writing a code of a web page it is important to "boxify" the design first - to cut your future page into boxes.
+			</p>
+		</div> 
+	</div>
+
+		<div class="lesson">
+            <h2>Lesson 3: Adding CSS Style to HTML Structure</h2>
+            <div class="notes">
+                <div class="subhead">CSS</div>
+			<p>
+				CSS (<em>Cascading Style Sheets</em>) is a language which allows programmers apply style to HTML elements.  It also helps them <em>avoid repetition</em>.
+			</p>
+		
+		<div class="subhead">Avoiding repetition</div>
+		
+			<p>
+				"Don't repeat yourself" (DRY) is an important principle for software developers. And if you want to avoid repetition in your code you have to plan it carefully. First of all, it will <em>save your time</em>: instead of applying attributes to every element in HTML code you can distinguish similar elements and apply certain attributes to them all in CSS. Secondly, it will help to <em>avoid mistakes and bugs</em>: repetition makes a code very complex and that can lead to errors, especially if the developer decides to change something in the code. So CSS is a great tool which makes a developer's life much easier. 
+			</p>
+		</div>	
+        </div>	  
+
+<h1>Important concepts - Telling Computers What to Do</h1>
+<div class="lesson">
+    <h2>Lesson 1: Introduction to 'Serious' Programming</h2>
+<div class="notes">
+    <div class="subhead">Computers and Computer Programming</div>
+    <p>
+    Computers are just machines. But unlike other machines like toasters or fridges, which are designed to do only a few things, computers can do anything. And they can do so with the help of <em>programs</em>, which tells them what to do. Without being programmed computers can do nothing so a program has to be a sequence of steps with instructions for a computer to do something useful. 
+
+    </p>
+    <div class="subhead">Programming Languages</div>
+    <p>
+    For organizing program instructions we need special programming languages. And like human languages programming languages have grammar too. But unlike human languages  grammar grammar in programming is very strict and lacks any ambiguity. In languages like English, people can understand sentences that aren't grammatically correct or ambiguous sentences depending on the situation. Computers can't. If you make even a smallest mistake in the syntax, your code will not run.
+
+    </p>
+    <div class="subhead">Python</div>
+    <p>
+    Python is a programming language. It also has a very strict grammar. For example, an  expression like <span class="code">2 + 2</span> can be executed by Python, but <span class="code">2 + 2 +</span> can't because it's not part of the language. 
+
+    </p>
+    </div>
+</div>
+<div class="lesson">
+    <h2>Lesson 2: Variables and Strings</h2>
+<div class="notes">
+    <div class="subhead">Variables in Python</div>
+    <p>
+    Programmers use variables to give names to values. Variables store the value of important data. They also make programs easier to understand. For example, looking at the code <span class="code">print 299792458 * 1.0 / 1000000000 * 100</span> it is hard to tell what 299792458 is and why these numbers are multiplied. But if we say that 299792458 is the speed of light and the code calculates how far light travels in centimeters in one nanosecond everything gets much clearer. 
+
+    </p>
+    <div class="subhead">Assignment</div>
+    <p>
+    So to tell Python that 299792458 is the speed of light we need to assign a variable to this value. We can do so by writing <span class="code">speed_of_light = 299792458.</span> The equals sign in this code 'takes the value of' not 'is the same as' like in maths. 
+We can reassign a variable to a different value later in our code. Moreover, variables can be used in their own assignment expressions: for example, <span class="code">days = days + 1</span>.
+
+    </p>
+    <div class="subhead">Strings</div>
+    <p>
+    A string in Python is a sequence of characters surrounded by quotes. It's important to remember how strings behave in Python. For example, if we run <span class="code">print 4 + 4</span> the output will be 8. But the code <span class="code">'4' + '4'</span> will give 44. Plus operator concatenates strings. 
+
+    </p>
+    </div>
+</div>
+<div class="lesson">
+    <h2>Lesson 3: Input -> Function -> Output</h2>
+<div class="notes">
+    <div class="subhead">Functions</div>
+    <p>
+    Functions, or procedures, are like small programs in code that are aimed at specific tasks. When given parameters they run and return a value to the main program. Functions are really useful because they help to divide our code into blocks, which can be developed independently. Functions once defined can be reused again and again. 
+
+    </p>
+    <div class="subhead">Making and using functions</div>
+    <p>
+    To make a function we need to start a line with a keyword def and then give the function a name followed by the function parameters in parentheses and a colon. Parameters are the values you pass to the function when you use (call) it later in your code. We also have to write a block ('body') of the function where we specify what to do with the input parameters. 
+For example, the following code returns the next number:<br>
+<span class="code">
+	def next_number(x):<br>
+	answer = x + 1<br>
+    	return answer<br></span>
+After you have defined a function, you can use it (call it) at any time, in any place of your code. To use a function we write the name of the function followed by the value or values in parentheses:<br>
+<span class="code">print next_number(45)<br>
+>>>46<br></span>
+The return keyword tells Python what the output must be. Without it the output will be:<br>
+<span class="code">>>>None</span><br>
+    </p>
+    </div>
+</div>
+</body>
+	
+</html>
