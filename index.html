@@ -126,9 +126,9 @@ We can reassign a variable to a different value later in our code. Moreover, var
     To make a function we need to start a line with a keyword def and then give the function a name followed by the function parameters in parentheses and a colon. Parameters are the values you pass to the function when you use (call) it later in your code. We also have to write a block ('body') of the function where we specify what to do with the input parameters. 
 For example, the following code returns the next number:<br>
 <span class="code">
-	def next_number(x):<br>
-	answer = x + 1<br>
-    	return answer<br></span>
+	def next_number(x):
+	<pre>	<span class="code">answer = x + 1</span></pre>
+	<pre>	<span class="code">return answer</span></pre>
 After you have defined a function, you can use it (call it) at any time, in any place of your code. To use a function we write the name of the function followed by the value or values in parentheses:<br>
 <span class="code">print next_number(45)<br>
 >>>46<br></span>
@@ -148,10 +148,11 @@ The return keyword tells Python what the output must be. Without it the output w
     <div class="subhead">While Loops</div>
     <p>
     While loops are similar to decision structures (they also have a condition) but they allow to execute a block of code any number of times as long as the test expression is true. While loops are really useful when we need to do a lot of repeated actions. They could save a lot of time to a programmer. A simple example of this structure can be:<br>
-<span class="code">i = 1<br>
-while i  <  10:<br>
-<span class="indented_code"> print 'i is now ' + i</span><br>
-<span class="indented_code">i = i + 1</span></span><br>
+<span class="code">
+i = 1<br>
+while i  <  10:
+<pre>	<span class="code">print 'i is now ' + i</span></pre>
+<pre>	<span class="code">i = i + 1</span></pre>
 Running this code Python will print out numbers from 1 to 9. Notice that the body of the loop should change the value of one or more variables so that eventually the condition becomes false and the loop terminates. Otherwise the loop will repeat forever, which is called an infinite loop.
 
     </p>
