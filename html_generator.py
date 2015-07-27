@@ -1,28 +1,28 @@
-def generate_lesson_html(lesson_title):
-    html_text_1 = '''
+def generate_lesson_HTML(lesson_title):
+    HTML_text_1 = '''
 <div class="lesson">
     <h2>''' + lesson_title
-    html_text_2 = '''</h2>
+    HTML_text_2 = '''</h2>
 <div class="notes">'''
-    lesson_html = html_text_1 + html_text_2
-    return lesson_html
+    lesson_HTML = HTML_text_1 + HTML_text_2
+    return lesson_HTML
 
 def generate_concept_HTML(concept_title, concept_description):
-    html_text_1 = '''
+    HTML_title = '''
     <div class="subhead">''' + concept_title
-    html_text_2 = '''</div>
+    HTML_description = '''</div>
     <p>
     ''' + concept_description
-    html_text_3 = '''
+    HTML_closing_tag = '''
     </p>'''
-    full_html_text = html_text_1 + html_text_2 + html_text_3
-    return full_html_text
+    full_HTML_text = HTML_title + HTML_description + HTML_closing_tag
+    return full_HTML_text
     
 
 def get_lesson_by_number(text, lesson_number):
         counter = 0
         while counter < lesson_number:
-                counter = counter + 1
+                counter += 1
                 next_lesson_start = text.find('Lesson')
                 next_lesson_end   = text.find('Lesson', next_lesson_start + 1)
                 if next_lesson_end >= 0:
@@ -35,9 +35,6 @@ def get_lesson_by_number(text, lesson_number):
                         lesson = text[next_lesson_start:]
                 text = text[next_lesson_end:]
         return lesson
-
-
-
 
 my_text = """Lesson 1: Introduction to 'Serious' Programming
 TITLE: Computers and Computer Programming
@@ -100,7 +97,7 @@ def get_description(concept):
 def get_concept_by_number(text, concept_number):
     counter = 0
     while counter < concept_number:
-        counter = counter + 1
+        counter += 1
         next_concept_start = text.find('TITLE:')
         next_concept_end   = text.find('TITLE:', next_concept_start + 1)
         if next_concept_end >= 0:
@@ -121,33 +118,33 @@ def make_list(text):
         lesson = get_lesson_by_number(text, counter)
     return my_list
 
-def generate_concepts_html(text):    
+def generate_concepts_HTML(text):    
     current_concept_number = 1
     concept = get_concept_by_number(text, current_concept_number)
-    all_html = ''
+    all_HTML = ''
     while concept != '':
         title = get_title(concept)
         description = get_description(concept)
-        concept_html = generate_concept_HTML(title, description)
-        all_html = all_html + concept_html
+        concept_HTML = generate_concept_HTML(title, description)
+        all_HTML = all_HTML + concept_HTML
         current_concept_number = current_concept_number + 1
         concept = get_concept_by_number(text, current_concept_number)        
-    return all_html
+    return all_HTML
 
-def generate_all_html(text):
+def generate_all_HTML(text):
     my_list = make_list(my_text)
-    html = ''
+    HTML = ''
     for e in my_list:
         lesson_title = get_lesson_title(e)
-        lesson_html = generate_lesson_html(lesson_title)
-        concepts_html = generate_concepts_html(e)
-        html = html + lesson_html + concepts_html + '''
+        lesson_HTML = generate_lesson_HTML(lesson_title)
+        concepts_HTML = generate_concepts_HTML(e)
+        HTML = HTML + lesson_HTML + concepts_HTML + '''
     </div>
 </div>'''
-    return html
+    return HTML
 
 
-print generate_all_html(my_text)
+print generate_all_HTML(my_text)
 
 
 
